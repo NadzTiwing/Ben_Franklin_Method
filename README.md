@@ -1,2 +1,3 @@
 # PracticeMethod
-for practice 
+
+for writing practice using Benjamin Franklin Method
