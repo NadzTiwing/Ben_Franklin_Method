@@ -12,7 +12,7 @@ export default async function handler(
   ) {
       try{
         fs.readFile('text.txt', function(err:any, content:any) {
-          if(err) res.status(200).json({status: 'failed', text:""});
+          if(err) res.status(200).json({status: 'failed', text:err});
           else res.status(200).json({status: 'success', text:content.toString()});
         });
       }catch(e){

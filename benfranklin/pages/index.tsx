@@ -35,7 +35,7 @@ const Home: NextPage = () => {
     if(data.status === "success"){
       const dataJSON = JSON.parse(data.text);
       setScript(dataJSON);
-    }else alert("something wrong happened in reading the file");
+    }else alert(data.text);
     
   }
 
