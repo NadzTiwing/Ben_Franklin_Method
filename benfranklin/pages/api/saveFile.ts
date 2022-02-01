@@ -11,7 +11,7 @@ export default async function handler(
   ) {
       try{
         const text = req.body.text;
-        fs.writeFile('text.txt', JSON.stringify(text), function(err:any) {
+        fs.writeFile('https://practice-method-hqj3m4fmc-nadztiwing.vercel.app/text.txt', JSON.stringify(text), function(err:any) {
           if(err) res.status(200).json({status: 'failed'});
           else res.status(200).json({status: 'success'});
         });
