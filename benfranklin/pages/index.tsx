@@ -9,6 +9,7 @@ const Home: NextPage = () => {
   const [itemIndex, setItemIndex] = useState(-1);
   const [script, setScript]= useState([]);
   const [checkedTexts, setCheckedTexts] = useState([]);
+  const [error, setError] = useState("");
 
   const onInsert=()=>{
     if(input !== ""){
@@ -35,7 +36,7 @@ const Home: NextPage = () => {
     if(data.status === "success"){
       const dataJSON = JSON.parse(data.text);
       setScript(dataJSON);
-    }else alert(data.text);
+    }else setError(JSON.stringify(data.text));
     
   }
 
@@ -105,6 +106,7 @@ const Home: NextPage = () => {
   return (
     <div className="container mx-auto my-auto">
       <Header/>
+      {error}
       <h1 className="text-success mt-4">Writing practice App:</h1>
       {checkedTexts.length === 0 ? 
       /*start of practicing writing */
