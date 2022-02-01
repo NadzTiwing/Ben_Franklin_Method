@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs';
+import path from 'path'
 
 type Res={
     status:string
@@ -11,7 +12,9 @@ export default async function handler(
   ) {
       try{
         const text = req.body.text;
-        fs.writeFile('../text.txt', JSON.stringify(text), function(err:any) {
+        const dirRelativeToPublicFolder = 'text.txt';
+        const dir = path.resolve('./public', dirRelativeToPublicFolder);
+        fs.writeFile(dir, JSON.stringify(text), function(err:any) {
           if(err) res.status(200).json({status: 'failed'});
           else res.status(200).json({status: 'success'});
         });
