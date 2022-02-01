@@ -11,7 +11,7 @@ export default async function handler(
     res: NextApiResponse<Res>
   ) {
       try{
-        fs.readFile('../benfranklin/public/text/text.txt', function(err:any, content:any) {
+        fs.readFile('../public/text/text.txt', function(err:any, content:any) {
           if(err) res.status(200).json({status: 'failed', text:""});
           else res.status(200).json({status: 'success', text:content.toString()});
         });
