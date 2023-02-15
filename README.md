@@ -1,3 +1,3 @@
-# PracticeMethod
+# Benjamin Franklin Writing Method
 
-for writing practice using Benjamin Franklin Method
+writing practice using Benjamin Franklin Method
