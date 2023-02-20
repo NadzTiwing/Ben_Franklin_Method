@@ -1,0 +1,58 @@
+.grid-container {
+    height: 100vh;
+    background-color: white !important;
+}
+.title {
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+.home-container {
+    margin: 3em;
+    align-items: center;
+}
+
+.write-form {
+    height: 80vh !important;
+}
+
+.option-btn, .check-btn {
+    float: right;
+}
+
+.check-btn {
+    margin-top: 1em;
+}
+
+.guide-txt {
+    margin-top: 2em;
+}
+
+.green-txt {
+    color: LimeGreen !important;
+}
+
+.green-border {
+    border-color: LimeGreen;
+}
+
+/* modal */
+.articles-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 24;
+    padding: 2.5em;
+}
+
+.modal-btns {
+    margin-top: 0.5em;
+}
+.modal-btns button {
+    margin: 0.5em;
+}
